@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row ">
+    <div class="col-12 grid-margin p-4">
+        <button class="btn btn-success">Scan Network</button>
+    </div>
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Traffic</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> IP src </th>
+                                <th> IP dest </th>
+                                <th> MAC src </th>
+                                <th> MAC dest </th>
+                                <th> Protocol src </th>
+                                <th> Protocol dest </th>
+                                <th> Flag </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+{% if devices %}
+{%for item in devices %}
+
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-muted m-0">
+                                        <p></p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="ps-2">{{item.ip}}</span>
+                                </td>
+                                <td>{{item.mac}}</td>
+                                <td>  </td>
+                                <td>
+                                    <div class="badge badge-outline-success">Connected</div>
+                                </td>
+                            </tr>
+                            {%endfor%}
+                            {%endif%}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

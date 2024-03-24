@@ -1,0 +1,92 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+    <a class="sidebar-brand brand-logo titre-app" href="/">
+      <img src={{url_for('static', filename="assets/images/logoi.svg")}} alt="logo" />
+    </a>
+    <a class="sidebar-brand brand-logo-mini" href="/"><img src={{url_for('static', filename="assets/images/logo--mini.svg")}} alt="logo" /></a>
+  </div>
+  <ul class="nav">
+    <li class="nav-item profile">
+      <div class="profile-desc">
+        <div class="profile-pic">
+          <div class="profile-name">
+            <h5 class="mb-0 font-weight-normal">Admin</h5>
+          </div>
+        </div>
+        <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+        <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+            <div class="d-flex flew-row align-items-center p-2">
+              <i class="mdi mdi-settings text-primary px-2 text-white"></i>
+              <a href="/account" class="text-decoration-none text-small text-white">Account settings</a>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+            <div class="d-flex flew-row align-items-center p-2">
+              <i class="mdi mdi-onepassword  text-info  px-2 text-white"></i>
+              <a href="/account/pass" class="text-small text-decoration-none  text-white">Change Password</a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item nav-category">
+      <span class="nav-link">Navigation</span>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="/">
+        <span class="menu-icon">
+          <i class="mdi mdi-speedometer"></i>
+        </span>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="/users">
+        <span class="menu-icon">
+          <i class="mdi mdi-table-large"></i>
+        </span>
+        <span class="menu-title">Users</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="/alert">
+        <span class="menu-icon">
+          <i class="mdi mdi-chart-bar"></i>
+        </span>
+        <span class="menu-title">Alerts</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+        <span class="menu-icon">
+          <i class="mdi mdi-access-point-network"></i>
+        </span>
+        <span class="menu-title">Traffic</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/band"> Band width </a></li>
+          <li class="nav-item"> <a class="nav-link" href="/trafic"> Trafic </a></li>
+          <li class="nav-item"> <a class="nav-link" href="/analyse"> Analyse </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="/setting">
+        <span class="menu-icon">
+          <i class="mdi mdi-security"></i>
+        </span>
+        <span class="menu-title">Settings</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="/about">
+        <span class="menu-icon">
+          <i class="mdi mdi-file-document-box"></i>
+        </span>
+        <span class="menu-title">About app</span>
+      </a>
+    </li>
+  </ul>
+</nav>
