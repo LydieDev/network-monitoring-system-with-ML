@@ -1,9 +1,9 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
     <a class="sidebar-brand brand-logo titre-app" href="/">
-      <img src={{url_for('static', filename="assets/images/logoi.svg")}} alt="logo" />
+      <img src={{url_for('static', filename="assets/images/logo.png")}} alt="logo" />
     </a>
-    <a class="sidebar-brand brand-logo-mini" href="/"><img src={{url_for('static', filename="assets/images/logo--mini.svg")}} alt="logo" /></a>
+    <a class="sidebar-brand brand-logo-mini" href="/"><img src={{url_for('static', filename="assets/images/logo-mini.png")}} alt="logo" /></a>
   </div>
   <ul class="nav">
     <li class="nav-item profile">
@@ -24,6 +24,12 @@
             <div class="d-flex flew-row align-items-center p-2">
               <i class="mdi mdi-onepassword  text-info  px-2 text-white"></i>
               <a href="/account/pass" class="text-small text-decoration-none  text-white">Change Password</a>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+            <div class="d-flex flew-row align-items-center p-2">
+              <i class="mdi mdi-close-circle-outline  text-info  px-2 text-white"></i>
+              <a href="/account/logout" class="text-small text-decoration-none  text-white">Logout</a>
             </div>
           </a>
         </div>
@@ -51,7 +57,7 @@
     <li class="nav-item menu-items">
       <a class="nav-link" href="/alert">
         <span class="menu-icon">
-          <i class="mdi mdi-chart-bar"></i>
+          <i class="mdi mdi-alert"></i>
         </span>
         <span class="menu-title">Alerts</span>
       </a>

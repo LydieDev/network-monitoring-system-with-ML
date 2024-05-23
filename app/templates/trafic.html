@@ -24,8 +24,8 @@
                             </tr>
                         </thead>
                         <tbody>
-{% if devices %}
-{%for item in devices %}
+<!-- {% if p %} -->
+{%for item in p %}
 
                             <tr>
                                 <td>
@@ -34,16 +34,18 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <span class="ps-2">{{item.ip}}</span>
+                                    <span class="ps-2">{{item['src_ip']}}</span>
                                 </td>
-                                <td>{{item.mac}}</td>
-                                <td>  </td>
+                                <td>{{item['dst_ip']}}</td>
+                                <td>{{item['protocol_type']}}</td>
+                                <td>{{item['service']}}</td>
+                                <td> {{ip}} </td>
                                 <td>
                                     <div class="badge badge-outline-success">Connected</div>
                                 </td>
                             </tr>
                             {%endfor%}
-                            {%endif%}
+                            <!-- {%endif%} -->
                         </tbody>
                     </table>
                 </div>

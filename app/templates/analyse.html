@@ -13,6 +13,8 @@
 </div>
 {% endif%}
 {% if predictions %}
-<p>{{predictions}}</p>
+{% for item in predictions %}
+<p>{{item | safe}}</p>
+{% endfor%}
 {% endif%}
 {% endblock content %}
