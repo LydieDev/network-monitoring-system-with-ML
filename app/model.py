@@ -16,7 +16,8 @@ class Model():
         _data = pd.read_csv(file_path)
         data = _data.copy()
 
-        selected_features = ['protocol_type', 'service', 'flag', 'src_bytes', 'dst_bytes', 'count','same_srv_rate', 'diff_srv_rate', 'dst_host_srv_count', 'dst_host_same_srv_rate']
+        selected_features=['duration','hot', 'count','protocol_type','service','src_bytes','dst_bytes','flag','land','wrong_fragment','urgent']
+
         newdata = data[selected_features]
 
         # Apply LabelEncoder to object columns
